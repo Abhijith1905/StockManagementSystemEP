@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <style>
+        body {
+            background-color: #E6E6FA;
+            font-family: Arial, sans-serif;
+        }
+
+        h3 {
+            text-align: center;
+            text-decoration: underline;
+            font-size: 24px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e1e7fc;
+            color: black;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        td form {
+            margin: 0;
+        }
+
+        a {
+            color: #FF0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .no-records {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 40px;
+            text-align: center;
+            width: 80%;
+            margin: 20px auto;
+            margin-top: 40px; /* Adjust this value as needed */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</h:head>
+
+<body bgcolor="#E6E6FA">
+    <ui:include src="navbar.html" />
+    <h3><u>Delete Stock</u></h3>
+    <center>
+        <h:panelGroup rendered="#{not empty adminbean.stocklist}">
+            <h:dataTable value="#{adminbean.stocklist}" var="stock" border="1">
+                <h:column>
+                    <f:facet name="header">ID</f:facet>
+                    #{stock.itemCode}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Name</f:facet>
+                    #{stock.itemName}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Category</f:facet>
+                    #{stock.category}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Quantity</f:facet>
+                    #{stock.quantity}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Price</f:facet>
+                    #{stock.unitPrice}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Purchase Date</f:facet>
+                    #{stock.purchasedate}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Added by</f:facet>
+                    #{stock.addedBy}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Action</f:facet>
+                    <h:form>
+                        <h:commandLink value="Delete" action="#{adminbean.deletestock(stock.itemCode)}" />
+                    </h:form>
+                </h:column>
+            </h:dataTable>
+        </h:panelGroup>
+
+        <h:panelGroup rendered="#{empty adminbean.stocklist}">
+            <div class="no-records"> No records available.  </div>
+        </h:panelGroup>
+    </center>
+</body>
+</html>

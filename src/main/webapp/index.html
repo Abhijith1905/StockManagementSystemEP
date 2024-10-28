@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Management System</title>
+
+    <link rel="stylesheet" href="resources/css/styles.css" />
+
+ 
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+   
+    <header class="container header">
+       
+        <nav class="nav">
+            <div class="logo">
+                <h2>StockPro</h2>
+            </div>
+
+            <div class="nav_menu" id="nav_menu">
+                <button class="close_btn" id="close_btn">
+                    <i class="ri-close-fill"></i>
+                </button>
+
+                <ul class="nav_menu_list">
+                    <li class="nav_menu_item">
+                        <a href="#features" class="nav_menu_link">Features</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <a href="#about" class="nav_menu_link">About</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <a href="login.jsf" class="nav_menu_link">Login</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <a href="#contact" class="nav_menu_link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="toggle_btn" id="toggle_btn">
+                <i class="ri-menu-line"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ==== HERO SECTION ==== -->
+    <section class="wrapper">
+        <div class="container">
+            <div class="grid-cols-2">
+                <div class="grid-item-1">
+                    <h1 class="main-heading">
+                        Welcome to <span>StockPro</span>
+                        <br />
+                        Manage Inventory Efficiently.
+                    </h1>
+                    <p class="info-text">
+                        Streamline your stock management with advanced tools and real-time tracking.
+                    </p>
+
+                    <div class="btn_wrapper">
+                        <button class="btn view_more_btn">
+                            Explore Features <i class="ri-arrow-right-line"></i>
+                        </button>
+
+                        <button class="btn documentation_btn">View Below</button>
+                    </div>
+                </div>
+                <div class="grid-item-2">
+                    <div class="team_img_wrapper">
+                        <img src="resources/images/inventory-management-system.webp" alt="inventory management system" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== FEATURES SECTION ==== -->
+    <section class="wrapper">
+        <div class="container" id="features" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Features</h2>
+            <div class="grid-cols-3">
+                <div class="grid-col-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="featured_info">
+                        <span class="title">Real-Time Tracking</span>
+                        <p>
+                            Monitor stock levels, movements, and transactions in real-time for efficient management.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-col-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="featured_info">
+                        <span class="title">Automated Reports</span>
+                        <p>
+                            Easily understandable records in form of data tables
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-col-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <div class="featured_info">
+                        <span class="title">Easy Integration</span>
+                        <p>
+                            Seamlessly integrate with existing systems and tools for a unified stock management solution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== ABOUT US SECTION ==== -->
+    <section class="wrapper" id="about">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <h2>About Us</h2><br>
+            <p>
+                StockPro is dedicated to providing top-tier stock management solutions to streamline your inventory processes. Our system is designed to offer real-time tracking, comprehensive reporting, and easy integration, making your stock management tasks efficient and effective.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="wrapper" id="contact">
+        <section class="contact">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further information, please contact us using the form below.</p><br>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StockPro All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <!-- ==== SCRIPT.JS ==== -->
+    <script async src="resources/js/script.js" ></script>
+</body>
+</html>

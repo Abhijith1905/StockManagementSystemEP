@@ -1,0 +1,11 @@
+com\klef\ep\managedbeans\AdminBean.class
+com\klef\ep\services\SupplierServiceImpl.class
+com\klef\ep\models\Admin.class
+com\klef\ep\services\AdminServiceImpl.class
+com\klef\ep\models\Stock.class
+com\klef\ep\managedbeans\SupplierBean.class
+com\klef\ep\servlets\InsertStock.class
+com\klef\ep\servlets\SupplierInsertStock.class
+com\klef\ep\services\AdminService.class
+com\klef\ep\services\SupplierService.class
+com\klef\ep\models\Supplier.class

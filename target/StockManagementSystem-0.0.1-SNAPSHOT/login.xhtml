@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://java.sun.com/jsf/html">
+	  
+	  
+
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="resources/css/login.css" />
+    <title>Login Page</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container supplier-login">
+            <h:form>
+                <h1>Supplier</h1>
+                <h2>login</h2>
+               
+                <h:inputText id="email" validatorMessage="Please enter a valid email address" a:placeholder="Email" value="#{supplierbean.email}">
+    			<f:validateRegex pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$" />
+				</h:inputText>
+	
+                <h:inputSecret id="password" validatorMessage="Password length must be in between 3 and 30" a:placeholder="Password" value="#{supplierbean.password}">
+				<f:validateLength minimum="3" maximum="30"/>
+				</h:inputSecret>
+
+               
+                <h:commandButton id="supplierlogin" styleClass="button" value="Login" action="#{supplierbean.validatesupplierlogin()}"/>
+            </h:form>
+        </div>
+        <div class="form-container admin-login">
+            <h:form>
+                <h1>Admin</h1>
+               <h2>login</h2>
+                
+                <h:inputText id="username" validatorMessage="Username length must be in between 3 and 30" a:placeholder="Username"  value="#{adminbean.username}">
+				<f:validateLength minimum="3" maximum="30"/>
+			    </h:inputText>
+                <h:inputSecret id="password" validatorMessage="Password length must be in between 3 and 30" a:placeholder="Password" value="#{adminbean.password}">
+				<f:validateLength minimum="3" maximum="30"/>
+				</h:inputSecret>
+
+              
+                <h:commandButton id="adminlogin" styleClass="button" value="Login" action="#{adminbean.validateadminlogin()}"/>
+            </h:form>
+
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Not a Supplier?</h1>
+                    <p>Click below to login as Admin</p>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Not an Admin?</h1>
+                     <p>Click below to login as Supplier</p>
+                    <button class="hidden" id="register">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="resources/js/loginscript.js"></script>
+</body>
+
+</html>

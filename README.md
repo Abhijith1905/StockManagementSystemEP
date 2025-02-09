@@ -1,1 +1,1 @@
-# StockManagementSystemEP
+# StockManagementSystemEP project
